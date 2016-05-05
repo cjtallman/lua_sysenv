@@ -10,9 +10,11 @@ install:
 - cmd: pip install hererocks
 - cmd: hererocks env --%LUA% -rlatest
 - cmd: luarocks install busted
+- cmd: luarocks install luacheck
 
 build_script:
 - cmd: luarocks make
 
 test_script:
-- cmd: busted
+- cmd: luacheck --std max+busted spec
+- cmd: busted --verbose
