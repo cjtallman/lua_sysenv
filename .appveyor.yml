@@ -1,22 +1,22 @@
 
-clone_depth: 5
-
+version: 1.0.{build}
 environment:
   matrix:
-  - LUA: "lua 5.1"
-  - LUA: "lua 5.2"
-  - LUA: "lua 5.3"
-  - LUA: "luajit 2.0"
-  - LUA: "luajit 2.1"
+  - LUA: lua 5.1
+# - LUA: lua 5.2
 
-before_build:
-  - set PATH=%CD%\env\bin;C:\Python27\Scripts;%PATH% # Add directory containing 'pip'
-  - pip install hererocks                            # to PATH, too.
-  - hererocks env --%LUA% -rlatest
-  - luarocks install busted
+install:
+- cmd: >-
+    set PATH=%CD%\env\bin;C:\Python27\Scripts;%PATH%
+
+    pip install hererocks
+
+    hererocks env --%LUA% -rlatest
+
+    luarocks install busted
 
 build_script:
-  - luarocks make
+- cmd: luarocks make
 
 test_script:
-  - busted
+- cmd: busted
