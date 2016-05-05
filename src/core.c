@@ -4,7 +4,10 @@
 #include <stdlib.h>
 
 #define STR(x) #x
+
+#ifndef MODULE_VER
 #define MODULE_VER STR(1.0.0)
+#endif
 
 #ifdef _MSC_VER
 #define PUTENV _putenv_s

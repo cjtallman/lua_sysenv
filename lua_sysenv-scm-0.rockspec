@@ -1,9 +1,10 @@
-package = 'lua_sysenv'
+package = "lua_sysenv"
 version = "scm-0"
 
 source =
 {
-    url = ""
+    url = "git://github.com/cjtallman/lua_sysenv",
+    branch = "master",
 }
 
 description =
@@ -25,9 +26,13 @@ dependencies =
 
 build =
 {
+    type ="builtin",
     modules =
     {
-        ["lua_sysenv"] = "src/core.c",
+        ["lua_sysenv"] =
+        {
+            sources = "src/core.c",
+            defines = ([[MODULE_VER="%s"]]):format(version),
+        }
     },
-    type = 'builtin',
 }

@@ -1,0 +1,9 @@
+
+*.obj
+*.a
+*.dll
+*.lib
+*.exp
+*.def
+
+*.rock
