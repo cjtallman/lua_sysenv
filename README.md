@@ -1,3 +1,4 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/ovvycu267x0qnqrt?svg=true)](https://ci.appveyor.com/project/cjtallman/lua-sysenv)
 
 Example Usage
 ==============

@@ -16,12 +16,11 @@ supported_platforms =
 {
     "windows",
     "win32",
-    "cygwin",
 }
 
 dependencies =
 {
-    "lua ~> 5.1"
+    "lua >= 5.1, < 5.4"
 }
 
 build =
