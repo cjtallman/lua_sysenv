@@ -1,15 +1,17 @@
 package = "lua_sysenv"
-version = "scm-0"
+version = "1.0-1"
 
 source =
 {
     url = "git://github.com/cjtallman/lua_sysenv",
-    branch = "master",
+    tag = "v1.0",
 }
 
 description =
 {
+    maintainer = "cjtallman@gmail.com",
     license  = "MIT/X11",
+    homepage = "https://github.com/cjtallman/lua_sysenv",
 }
 
 supported_platforms =
