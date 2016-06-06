@@ -1,4 +1,6 @@
 
+lua
+
 *.obj
 *.a
 *.dll
